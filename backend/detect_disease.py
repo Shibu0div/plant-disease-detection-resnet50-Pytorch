@@ -12,7 +12,7 @@ transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD)
 ])
-model_path = "saved_model/best_model_resNet50_Finetuned.pt"
+model_path = "saved model/best_model_resNet50_Finetuned.pt"
 def detect(file):
     image = Image.open(file).convert("RGB")
     input_tensor = transform(image).unsqueeze(0)
